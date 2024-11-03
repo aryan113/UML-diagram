@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.8.2" pages="16">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.8.2" pages="17">
   <diagram name="ElevatorSystem" id="ocNDGLhU9f1mYKNa9Q7A">
     <mxGraphModel dx="1774" dy="1725" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -6962,6 +6962,540 @@
         </mxCell>
         <mxCell id="RE-tRU11Eh8fd2cfeMV6-90" value="1. Get Machine Status: GET /api/vending-machines/{machine_id}/status&lt;br&gt;2. Get Inventory Items: GET /api/vending-machines/{machine_id}/inventory&lt;div&gt;3.&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Select Item:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;POST /api/vending-machines/{machine_id}/select-item&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp;Request:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;item_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;101&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;&amp;nbsp; &amp;nbsp;Response:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;Item selected successfully.&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;item&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;item_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;101&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;Chips&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;price&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;1.5&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;4.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Process Payment:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;POST /api/vending-machines/{machine_id}/process-payment&lt;br&gt;&amp;nbsp; &amp;nbsp; Request:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;item_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;101&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;payment_type&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;Card&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;amount&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;1.5&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;&amp;nbsp; &amp;nbsp; Response:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;transaction_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;5001&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;status&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;success&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;amount&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;1.5&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;payment_type&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;Card&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;5.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Dispense Item:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;POST /api/vending-machines/{machine_id}/dispense-item&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp; Request:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;transaction_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;5001&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Response:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;Item dispensed successfully.&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;item&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;item_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;101&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;Chips&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;6.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Get Transaction History:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;GET /api/vending-machines/{machine_id}/transactions&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="RE-tRU11Eh8fd2cfeMV6-87">
           <mxGeometry y="34" width="750" height="196" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uaMhK6wv2XNALfHqsQkS" name="ATMSystem">
+    <mxGraphModel dx="3247" dy="1420" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;ATM System&lt;/font&gt;&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="360" y="70" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-2" value="abstract ATMState" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="210" width="370" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-3" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-2">
+          <mxGeometry y="26" width="370" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-2">
+          <mxGeometry y="52" width="370" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-5" value="&lt;code&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;+ insertCard&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(ATM atm, Card card);&lt;/span&gt;&lt;/code&gt;&lt;div&gt;&lt;code&gt;&lt;span class=&quot;hljs-params&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;authenticatePin&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;(ATM atm, Card card, &lt;/span&gt;&lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt; pin);&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;selectOperation&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;(ATM atm, Card card, TransactionType txnType);&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;cashWithdrawal&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;(ATM atm, Card card, &lt;/span&gt;&lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt; withdrawAmount);&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;displayBalance&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;(ATM atm, Card card):&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;&lt;code&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;+ returnCard&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;&lt;code&gt;&lt;span class=&quot;hljs-params&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;/code&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;exit&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;(ATM atm);&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-2">
+          <mxGeometry y="60" width="370" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-6" value="&lt;code&gt;IdleState&lt;/code&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="470" width="260" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-7" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-6">
+          <mxGeometry y="26" width="260" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-6">
+          <mxGeometry y="52" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-9" value="+&amp;nbsp;&lt;code&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;insertCard&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(ATM atm, Card card);&lt;/span&gt;&lt;/code&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-6">
+          <mxGeometry y="60" width="260" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-10" value="&lt;code&gt;HasCardState&lt;/code&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="570" width="360" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-11" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-10">
+          <mxGeometry y="26" width="360" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-10">
+          <mxGeometry y="52" width="360" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-13" value="+&amp;nbsp;&lt;code&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;authenticatePin&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;(ATM atm, Card card, &lt;/span&gt;&lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt; pin);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;div&gt;&lt;font face=&quot;monospace&quot;&gt;+&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;exit&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;(ATM atm);&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;returnCard&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;();&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-10">
+          <mxGeometry y="60" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-14" value="&lt;code&gt;SelectOperationState&lt;/code&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="210" width="530" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-14">
+          <mxGeometry y="26" width="530" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-17" value="+&amp;nbsp;&lt;code&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;selectOperation&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(ATM atmObject, Card card, TransactionType txnType);&lt;/span&gt;&lt;/code&gt;&lt;div&gt;&lt;code&gt;&lt;span class=&quot;hljs-params&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;exit&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;(ATM atmObject);&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;returnCard&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;();&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;&lt;code&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;+ showOperations&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-14">
+          <mxGeometry y="34" width="530" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-18" value="&lt;code&gt;CashWithdrawalState&lt;/code&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="466" width="530" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-20" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-18">
+          <mxGeometry y="26" width="530" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-21" value="+&amp;nbsp;&lt;code&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;cashWithdrawal&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;(ATM atmObject, Card card, &lt;/span&gt;&lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt; withdrawalAmountRequest);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;div&gt;&lt;code&gt;&lt;span class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;exit&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;(ATM atmObject);&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;returnCard&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;();&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-18">
+          <mxGeometry y="34" width="530" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-22" value="&lt;code&gt;CheckBalanceState&lt;/code&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="350" width="550" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-24" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-22">
+          <mxGeometry y="26" width="550" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-25" value="+&amp;nbsp;&lt;code&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;displayBalance&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(ATM atm, Card card);&lt;/span&gt;&lt;/code&gt;&lt;div&gt;&lt;div&gt;&lt;code&gt;+&amp;nbsp;&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;exit&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;(ATM atmObject);&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;returnCard&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;();&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-22">
+          <mxGeometry y="34" width="550" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-26" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0.304;entryY=-0.023;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="IUmjXFYqMrmDSvnTLjMt-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="380" as="sourcePoint" />
+            <mxPoint x="320" y="460" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="320" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-27" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-26">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-28" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-26">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-44" value="is-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IUmjXFYqMrmDSvnTLjMt-26">
+          <mxGeometry x="0.3749" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-29" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="IUmjXFYqMrmDSvnTLjMt-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="400" as="sourcePoint" />
+            <mxPoint x="670" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-30" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-29">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-31" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-29">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-45" value="is-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IUmjXFYqMrmDSvnTLjMt-29">
+          <mxGeometry x="-0.6325" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-32" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0.319;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="IUmjXFYqMrmDSvnTLjMt-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="400" as="sourcePoint" />
+            <mxPoint x="720" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-33" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-32">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-34" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-32">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-46" value="is-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IUmjXFYqMrmDSvnTLjMt-32">
+          <mxGeometry x="-0.0815" y="-2" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-35" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="810" y="260" as="sourcePoint" />
+            <mxPoint x="870" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-36" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-35">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-37" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-35">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-47" value="is-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IUmjXFYqMrmDSvnTLjMt-35">
+          <mxGeometry x="0.0333" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-41" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="810" y="380" as="sourcePoint" />
+            <mxPoint x="870" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-42" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-41">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-43" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-41">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-48" value="is-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IUmjXFYqMrmDSvnTLjMt-41">
+          <mxGeometry x="-0.0333" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-49" value="ATM" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="210" width="280" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-50" value="&lt;code&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;-&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;&quot;&gt; &lt;/span&gt;&lt;span class=&quot;hljs-type&quot;&gt;ATM&lt;/span&gt;&lt;span class=&quot;&quot;&gt;&amp;nbsp;singleTon&lt;/span&gt;&lt;span class=&quot;hljs-variable&quot;&gt;Object;&lt;/span&gt;&lt;/code&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-keyword&quot;&gt;&lt;font face=&quot;monospace&quot;&gt;+&amp;nbsp;&lt;/font&gt;private&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt; atmBalance;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-type&quot;&gt;+ int&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt; noOfTwoThousandNotes;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-type&quot;&gt;+ int&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt; noOfFiveHundredNotes;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-type&quot;&gt;+ int&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt; noOfOneHundredNotes;&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-49">
+          <mxGeometry y="26" width="280" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-51" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-49">
+          <mxGeometry y="110" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-52" value="+ getter &amp;amp; setter method();" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-49">
+          <mxGeometry y="118" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-53" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="IUmjXFYqMrmDSvnTLjMt-3">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="150" y="250" as="sourcePoint" />
+            <mxPoint x="310" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-54" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-53">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-55" value="has-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IUmjXFYqMrmDSvnTLjMt-53">
+          <mxGeometry x="-0.012" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-56" value="User" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-380" y="460" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-58" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-56">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-59" value="+&amp;nbsp;&lt;code&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;getCard&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;div&gt;&lt;code&gt;&lt;span class=&quot;hljs-params&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;setCard&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;(Card card);&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-56">
+          <mxGeometry y="34" width="160" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-60" value="UserBankAccount" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-410" y="670" width="240" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-61" value="+&amp;nbsp;&lt;code&gt;&lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;&quot;&gt;&amp;nbsp;balance;&lt;/span&gt;&lt;/code&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-60">
+          <mxGeometry y="26" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-62" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-60">
+          <mxGeometry y="52" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-63" value="+&amp;nbsp;&lt;code&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;withdrawalBalance&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;&amp;nbsp;amount);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-60">
+          <mxGeometry y="60" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-64" value="Card" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-90" y="570" width="240" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-73" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=0.875;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="IUmjXFYqMrmDSvnTLjMt-64" target="IUmjXFYqMrmDSvnTLjMt-60">
+          <mxGeometry x="-0.5291" y="-20" relative="1" as="geometry">
+            <mxPoint y="40" as="sourcePoint" />
+            <mxPoint x="160" y="40" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-74" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-73">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-75" value="has-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IUmjXFYqMrmDSvnTLjMt-73">
+          <mxGeometry x="-0.2449" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-65" value="-&amp;nbsp;&lt;code&gt;&lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;&quot;&gt; cardNumber;&lt;/span&gt;&lt;/code&gt;&lt;div&gt;&lt;code&gt;&lt;span class=&quot;&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt; cvv;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt; expiryDate;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt; holderName;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-keyword&quot;&gt;static&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-variable&quot;&gt;PIN_NUMBER&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-operator&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;112211&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-64">
+          <mxGeometry y="26" width="240" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-66" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-64">
+          <mxGeometry y="110" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-67" value="+&amp;nbsp;&lt;code&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;isCorrectPINEntered&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt; pin);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;div&gt;&lt;code&gt;&lt;span class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;getBankBalance&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;();&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;deductBankBalance&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt; amount);&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;setBankAccount&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;(UserBankAccount bankAccount);&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-64">
+          <mxGeometry y="118" width="240" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-68" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=0.363;entryY=-0.012;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="IUmjXFYqMrmDSvnTLjMt-60">
+          <mxGeometry x="-0.5002" y="40" relative="1" as="geometry">
+            <mxPoint x="-350" y="550" as="sourcePoint" />
+            <mxPoint x="-190" y="550" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-69" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-68">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="10" y="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-12" value="has-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IUmjXFYqMrmDSvnTLjMt-68">
+          <mxGeometry x="-0.4021" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-70" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="IUmjXFYqMrmDSvnTLjMt-64">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-220" y="530" as="sourcePoint" />
+            <mxPoint x="-60" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-71" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-70">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-72" value="has-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IUmjXFYqMrmDSvnTLjMt-70">
+          <mxGeometry x="-0.2424" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-76" value="ATMRoom" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-460" y="204" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-78" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-76">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-79" value="-&amp;nbsp;&lt;code&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(){&lt;/span&gt;&lt;/code&gt;&lt;div&gt;&lt;code&gt;&lt;span class=&quot;hljs-params&quot;&gt;&amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;/code&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;createUser&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;();&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;&amp;nbsp;}&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;createCard&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;();&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;createBankAccount&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;();&lt;/span&gt;&lt;/div&gt;&lt;code&gt;&lt;span class=&quot;&quot;&gt;&lt;/span&gt;&lt;/code&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-76">
+          <mxGeometry y="34" width="160" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-80" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="IUmjXFYqMrmDSvnTLjMt-50">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-300" y="280" as="sourcePoint" />
+            <mxPoint x="-140" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-81" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-80">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-82" value="has-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IUmjXFYqMrmDSvnTLjMt-80">
+          <mxGeometry x="0.3855" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-83" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=0.613;entryY=-0.044;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="IUmjXFYqMrmDSvnTLjMt-56">
+          <mxGeometry x="-0.8083" y="38" relative="1" as="geometry">
+            <mxPoint x="-368" y="330" as="sourcePoint" />
+            <mxPoint x="-210" y="330" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-84" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-83">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-85" value="has-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IUmjXFYqMrmDSvnTLjMt-83">
+          <mxGeometry x="0.049" y="-2" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-86" value="&lt;code&gt;CashWithdrawProcessor&lt;/code&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="632" width="390" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-87" value="+&amp;nbsp;&lt;code&gt;CashWithdrawProcessor nextCashWithdrawalProcessor;&lt;/code&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-86">
+          <mxGeometry y="26" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-88" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-86">
+          <mxGeometry y="52" width="390" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-89" value="+&amp;nbsp;&lt;code&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;withdraw&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;(ATM atm, &lt;/span&gt;&lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt; remainingAmount);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-86">
+          <mxGeometry y="60" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-90" value="&lt;code&gt;TwoThousandWithdrawProcessor&lt;/code&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="800" width="570" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-92" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-90">
+          <mxGeometry y="26" width="570" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-93" value="&lt;pre lang=&quot;java&quot; class=&quot;code highlight&quot;&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;+ TwoThousandWithdrawProcessor&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(CashWithdrawProcessor nextCashWithdrawProcessor)&lt;/span&gt;&lt;span class=&quot;&quot;&gt; {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;hljs-built_in&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;&quot;&gt;(nextCashWithdrawProcessor);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;pre lang=&quot;java&quot; class=&quot;code highlight&quot;&gt;&lt;span class=&quot;&quot;&gt;&lt;code&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;+ withdraw&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;(ATM atm, &lt;/span&gt;&lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt; remainingAmount)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;br&gt;&lt;/span&gt;&lt;/pre&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-90">
+          <mxGeometry y="34" width="570" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-94" value="&lt;code&gt;FiveHundredWithdrawProcessor&lt;/code&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="960" width="620" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-95" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-94">
+          <mxGeometry y="26" width="620" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-96" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-94">
+          <mxGeometry y="52" width="620" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-97" value="&lt;pre lang=&quot;java&quot; class=&quot;code highlight&quot;&gt;&lt;span class=&quot;&quot;&gt;+ &lt;/span&gt;&lt;span class=&quot;hljs-title.function&quot;&gt;FiveHundredWithdrawProcessor&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(CashWithdrawProcessor nextCashWithdrawProcessor)&lt;/span&gt;&lt;span class=&quot;&quot;&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;hljs-built_in&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;&quot;&gt;(nextCashWithdrawProcessor);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;pre lang=&quot;java&quot; class=&quot;code highlight&quot;&gt;&lt;span class=&quot;&quot;&gt;+ &lt;/span&gt;withdraw&lt;span style=&quot;background-color: initial; font-family: Helvetica; white-space: normal;&quot; class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;(ATM atm, &lt;/span&gt;&lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt; remainingAmount);&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-94">
+          <mxGeometry y="60" width="620" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-98" value="&lt;code&gt;OneHundredWithdrawProcessor&lt;/code&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="790" width="580" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-99" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-98">
+          <mxGeometry y="26" width="580" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-100" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-98">
+          <mxGeometry y="52" width="580" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-101" value="+&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-title.function&quot;&gt;OneHundredWithdrawProcessor&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-params&quot;&gt;(CashWithdrawProcessor nextCashWithdrawProcessor)&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;&quot;&gt;{&lt;/span&gt;&lt;pre lang=&quot;java&quot; class=&quot;code highlight&quot;&gt;&lt;span class=&quot;&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;hljs-built_in&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;&quot;&gt;(nextCashWithdrawProcessor);&lt;/span&gt;&lt;br/&gt;&lt;span class=&quot;&quot;&gt;    }&lt;/span&gt;&lt;br/&gt;&lt;/pre&gt;&lt;pre lang=&quot;java&quot; class=&quot;code highlight&quot;&gt;&lt;span class=&quot;&quot;&gt;+ &lt;/span&gt;withdraw&lt;span style=&quot;background-color: initial; font-family: Helvetica; white-space: normal;&quot; class=&quot;hljs-params&quot;&gt;&lt;span class=&quot;hljs-params&quot;&gt;(ATM atm, &lt;/span&gt;&lt;span class=&quot;hljs-type&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt; remainingAmount);&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-98">
+          <mxGeometry y="60" width="580" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-102" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=0.633;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="IUmjXFYqMrmDSvnTLjMt-86">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="1090" y="530" as="sourcePoint" />
+            <mxPoint x="1250" y="530" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1227" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-103" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-102">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-104" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=1.005;entryY=0.038;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="IUmjXFYqMrmDSvnTLjMt-87">
+          <mxGeometry x="0.1637" y="-60" relative="1" as="geometry">
+            <mxPoint x="1370" y="710" as="sourcePoint" />
+            <mxPoint x="1420" y="660" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1371" y="710" />
+              <mxPoint x="1371" y="697" />
+              <mxPoint x="1440" y="697" />
+              <mxPoint x="1440" y="659" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-105" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-104">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="140" y="-30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-106" value="has-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="IUmjXFYqMrmDSvnTLjMt-104">
+          <mxGeometry x="0.0473" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-107" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0.672;entryY=-0.008;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="IUmjXFYqMrmDSvnTLjMt-90">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="990" y="720" as="sourcePoint" />
+            <mxPoint x="1150" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-108" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-107">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="10" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-109" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-107">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-110" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0.347;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="IUmjXFYqMrmDSvnTLjMt-94">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1240" y="720" as="sourcePoint" />
+            <mxPoint x="1400" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-111" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-110">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-112" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-110">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-113" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0.224;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="IUmjXFYqMrmDSvnTLjMt-98">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1290" y="720" as="sourcePoint" />
+            <mxPoint x="1450" y="720" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1290" y="750" />
+              <mxPoint x="1580" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-114" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-113">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-115" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-113">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-116" value="&lt;code&gt;&lt;b&gt;TransactionType&lt;/b&gt;&lt;/code&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="152" width="180" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-117" value="+&amp;nbsp;&lt;code&gt;CASH_WITHDRAWAL&lt;/code&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-116">
+          <mxGeometry y="26" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="IUmjXFYqMrmDSvnTLjMt-118" value="+&amp;nbsp;&lt;code&gt;BALANCE_CHECK&lt;/code&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IUmjXFYqMrmDSvnTLjMt-116">
+          <mxGeometry y="52" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Schema Design&lt;/font&gt;&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="230" y="930" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-2" value="User" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="1100" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-3" value="+ int userID;&lt;div&gt;+ String userName;&lt;/div&gt;&lt;div&gt;+ String userEmail;&lt;/div&gt;&lt;div&gt;+ String userPhone;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="FwPNwSuZ5E1R_eYK8Ev_-2">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-4" value="Card" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=20;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1130" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-5" value="+ int cardID;&lt;div&gt;+ int accountID;&lt;/div&gt;&lt;div&gt;+ int userID;&lt;br&gt;&lt;div&gt;+ String cardName;&lt;/div&gt;&lt;div&gt;+ String cardNumber;&lt;/div&gt;&lt;div&gt;+ int cvvNumber;&lt;/div&gt;&lt;div&gt;+ Data&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;expiryDate;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ int atmPIN;&lt;/div&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="FwPNwSuZ5E1R_eYK8Ev_-4">
+          <mxGeometry y="20" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-6" value="Account" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="1390" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-7" value="+ int accountID;&lt;div&gt;+ int userID;&lt;/div&gt;&lt;div&gt;+ Double balance;&lt;/div&gt;&lt;div&gt;+ String accountNumber;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="FwPNwSuZ5E1R_eYK8Ev_-6">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-8" value="ATM" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1400" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-9" value="+ int atmID;&lt;div&gt;+ int atmRoomID;&lt;br&gt;&lt;div&gt;+ String location;&lt;/div&gt;&lt;div&gt;+ ATMState state;&lt;/div&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="FwPNwSuZ5E1R_eYK8Ev_-8">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-13" value="ATMState" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="170" y="1400" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-14" value="IdleState" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="FwPNwSuZ5E1R_eYK8Ev_-13">
+          <mxGeometry y="26" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-15" value="HasCardState" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="FwPNwSuZ5E1R_eYK8Ev_-13">
+          <mxGeometry y="56" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-16" value="CashWithdrawState&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;CheckBalanceState&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="FwPNwSuZ5E1R_eYK8Ev_-13">
+          <mxGeometry y="86" width="160" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-17" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="FwPNwSuZ5E1R_eYK8Ev_-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-10" y="1220" as="sourcePoint" />
+            <mxPoint x="150" y="1220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-18" value="N" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="FwPNwSuZ5E1R_eYK8Ev_-17">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-19" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" target="FwPNwSuZ5E1R_eYK8Ev_-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="1410" as="sourcePoint" />
+            <mxPoint x="260" y="1410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-20" value="N" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="FwPNwSuZ5E1R_eYK8Ev_-19">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-21" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" target="FwPNwSuZ5E1R_eYK8Ev_-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="1180" as="sourcePoint" />
+            <mxPoint x="280" y="1180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-22" value="N" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="FwPNwSuZ5E1R_eYK8Ev_-21">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-23" value="API endpoint" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-90" y="1630" width="680" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-25" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="FwPNwSuZ5E1R_eYK8Ev_-23">
+          <mxGeometry y="26" width="680" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-26" value="+ Insert Card:- POST /api/atm/insert_card&lt;div&gt;&amp;nbsp; &amp;nbsp; Request:&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;atm_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;ATM123&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;card_number&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;1234-5678-9876-5432&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;pin&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;1234&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;&amp;nbsp; &amp;nbsp; Response:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;Card accepted&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;atm_state&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;HasCardState&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Withdraw Cash:-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;POST /api/atm/withdraw_cash&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp;Request:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;atm_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;ATM123&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;amount&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;3500&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;&amp;nbsp; &amp;nbsp;Response:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;Withdrawal successful&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;dispensed_notes&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;2000&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;500&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;3&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;balance&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;1500&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Check Balance:-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;GET /api/atm/check_balance&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp;Request:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;atm_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;ATM123&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;card_number&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;1234-5678-9876-5432&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;&amp;nbsp; &amp;nbsp;Response:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;balance&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;5000&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="FwPNwSuZ5E1R_eYK8Ev_-23">
+          <mxGeometry y="34" width="680" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-27" value="ATMRoom" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="1340" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-31" value="" style="endArrow=none;html=1;rounded=0;entryX=0.994;entryY=0.308;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="FwPNwSuZ5E1R_eYK8Ev_-27" target="FwPNwSuZ5E1R_eYK8Ev_-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="60" as="sourcePoint" />
+            <mxPoint x="160" y="60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-32" value="N" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="FwPNwSuZ5E1R_eYK8Ev_-31">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FwPNwSuZ5E1R_eYK8Ev_-28" value="+ Int id;&lt;div&gt;+ String location;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="FwPNwSuZ5E1R_eYK8Ev_-27">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
