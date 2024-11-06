@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.8.3" pages="20">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.8.3" pages="21">
   <diagram name="ElevatorSystem" id="ocNDGLhU9f1mYKNa9Q7A">
     <mxGraphModel dx="2021" dy="1808" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -8896,6 +8896,417 @@
         </mxCell>
         <mxCell id="kdD0YphTqZcNB3Cz-86R-128" value="&lt;strong&gt;1. Factory Pattern&lt;/strong&gt;: Used to create &lt;code&gt;Piece&lt;/code&gt; objects (King, Queen, etc.) based on the &lt;code&gt;type&lt;/code&gt; parameter.&lt;div&gt;&lt;strong&gt;2. Strategy Pattern&lt;/strong&gt;: Each piece has unique movement rules, so the &lt;code&gt;canMove&lt;/code&gt; logic can be implemented using a strategy pattern.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;3. Observer Pattern&lt;/strong&gt;: The &lt;code&gt;Game&lt;/code&gt; class can use the observer pattern to notify players when game events happen (e.g., check, checkmate, or stalemate).&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;4. Singleton Pattern&lt;/strong&gt;: The &lt;code&gt;Board&lt;/code&gt; class can be a singleton within each game instance, ensuring a single point of truth for the board’s state at any given time during the game.&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="kdD0YphTqZcNB3Cz-86R-125">
           <mxGeometry y="34" width="640" height="126" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="rYKWESokzASulG77cz3-" name="AirlineSystem">
+    <mxGraphModel dx="2021" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Airline System&lt;/font&gt;&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="570" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-2" value="Booking" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="120" width="260" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-3" value="String bookingNumber;&lt;div&gt;Flight flight;&lt;/div&gt;&lt;div&gt;Seat seat;&lt;/div&gt;&lt;div&gt;Passenger passenger;&lt;br&gt;&lt;/div&gt;&lt;div&gt;double price;&lt;br&gt;&lt;/div&gt;&lt;div&gt;BookingStatus status;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-2">
+          <mxGeometry y="26" width="260" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-2">
+          <mxGeometry y="120" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-5" value="void cancel();&lt;div&gt;String getBookingNumber()&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-2">
+          <mxGeometry y="128" width="260" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-6" value="&lt;b&gt;BookingStatus&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="60" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-7" value="CONFIRMED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-6">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-8" value="CANCELLED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-6">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-9" value="PENDING&lt;div&gt;EXPIRED&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-6">
+          <mxGeometry y="78" width="140" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-10" value="BookingManager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="130" width="250" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-82" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=1;entryY=0.881;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Xb2A5Su3GvtsL2DQCWdl-10" target="Xb2A5Su3GvtsL2DQCWdl-55">
+          <mxGeometry x="0.5059" y="-32" relative="1" as="geometry">
+            <mxPoint y="40" as="sourcePoint" />
+            <mxPoint x="160" y="40" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-83" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-82">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-11" value="-&amp;nbsp;static BookingManager instance;&lt;div&gt;- Map&amp;lt;String, Booking&amp;gt; bookings;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-10">
+          <mxGeometry y="26" width="250" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-10">
+          <mxGeometry y="70" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-13" value="+&amp;nbsp;Booking createBooking(Flight flight, Passenger passenger, Seat seat, double price);&lt;div&gt;+ void cancelBooking(String bookingNumber);&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ String generateBookingNumber();&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-10">
+          <mxGeometry y="78" width="250" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-14" value="Flight" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="363" width="230" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-15" value="-&amp;nbsp;String flightNumber;&lt;div&gt;-&amp;nbsp;String source;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;String destination;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;LocalDateTime departureTime;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;LocalDateTime arrivalTime;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;List&amp;lt;Seat&amp;gt; availableSeats;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-14">
+          <mxGeometry y="26" width="230" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-14">
+          <mxGeometry y="130" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-17" value="+ getter &amp;amp; setter method();" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-14">
+          <mxGeometry y="138" width="230" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-18" value="FlightSearch" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="390" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-19" value="-&amp;nbsp;List&amp;lt;Flight&amp;gt; flights;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-18">
+          <mxGeometry y="26" width="220" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-20" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-18">
+          <mxGeometry y="60" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-21" value="+&amp;nbsp;searchFlights(String source, String destination, LocalDate date);" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-18">
+          <mxGeometry y="68" width="220" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-70" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=0.495;entryY=1.048;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Xb2A5Su3GvtsL2DQCWdl-18">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-50" y="148" as="sourcePoint" />
+            <mxPoint x="108.90000000000009" y="110.01600000000008" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-71" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-70">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-88" value="has-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Xb2A5Su3GvtsL2DQCWdl-70">
+          <mxGeometry x="0.0206" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-22" value="Payment" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="630" width="250" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-23" value="- String paymentId;&lt;div&gt;-&amp;nbsp;String paymentMethod;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;double amount;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;PaymentStatus status;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-22">
+          <mxGeometry y="26" width="250" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-24" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-22">
+          <mxGeometry y="100" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-25" value="+&amp;nbsp;void processPayment();" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-22">
+          <mxGeometry y="108" width="250" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-26" value="PaymentProcessor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="624" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-27" value="-&amp;nbsp;static PaymentProcessor instance;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-26">
+          <mxGeometry y="26" width="260" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-28" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-26">
+          <mxGeometry y="52" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-29" value="+&amp;nbsp;processPayment(Payment payment);&lt;div&gt;+&amp;nbsp;PaymentProcessor getInstance();&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-26">
+          <mxGeometry y="60" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-30" value="&lt;b&gt;PaymentStatus&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="585" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-31" value="PENDING" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-30">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-32" value="COMPLETE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-30">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-33" value="FAILED&lt;div&gt;REFUNDED&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-30">
+          <mxGeometry y="78" width="140" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-34" value="Seat" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="260" width="150" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-35" value="-&amp;nbsp;String seatNumber;&lt;div&gt;-&amp;nbsp;SeatType type;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;SeatStatus status;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-34">
+          <mxGeometry y="26" width="150" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-36" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-34">
+          <mxGeometry y="90" width="150" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-37" value="+&amp;nbsp;void reserve();&lt;div&gt;+&amp;nbsp;void release();&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-34">
+          <mxGeometry y="98" width="150" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-42" value="SeatType" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="223" width="140" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-43" value="ECONOMY" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-42">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-44" value="PREMIUM&lt;div&gt;FIRSTCLASS&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-42">
+          <mxGeometry y="52" width="140" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-45" value="BUSINESS" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-42">
+          <mxGeometry y="90" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-46" value="SeatStatus" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="350" width="140" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-47" value="AVAILABLE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-46">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-48" value="RESERVED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-46">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-49" value="OCCUPIED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-46">
+          <mxGeometry y="78" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-50" value="Aircraft" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="570" width="220" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-51" value="-&amp;nbsp;String tailNumber;&lt;div&gt;-&amp;nbsp;String model;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;int totalSeats;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-50">
+          <mxGeometry y="26" width="220" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-52" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-50">
+          <mxGeometry y="80" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-53" value="+ getter &amp;amp; setter method();" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-50">
+          <mxGeometry y="88" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-54" value="Passenger" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="70" width="160" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-55" value="- int id;&lt;div&gt;-&amp;nbsp;String name;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;String email;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;String phone;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-54">
+          <mxGeometry y="26" width="160" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-56" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-54">
+          <mxGeometry y="110" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-57" value="+ getter &amp;amp; setter method();" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-54">
+          <mxGeometry y="118" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-58" value="AirlineManagementSystem" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="470" width="329" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-84" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=0.72;entryY=1.01;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Xb2A5Su3GvtsL2DQCWdl-58" target="Xb2A5Su3GvtsL2DQCWdl-13">
+          <mxGeometry x="-0.7037" y="50" relative="1" as="geometry">
+            <mxPoint x="190" as="sourcePoint" />
+            <mxPoint x="300" y="-150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="190" y="-70" />
+              <mxPoint x="301" y="-70" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-85" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-84">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-86" value="has-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Xb2A5Su3GvtsL2DQCWdl-84">
+          <mxGeometry x="-0.0666" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-59" value="-&amp;nbsp;List&amp;lt;Flight&amp;gt; flights;&lt;div&gt;-&amp;nbsp;List&amp;lt;Aircraft&amp;gt; aircrafts;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;FlightSearch flightSearch;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;BookingManager bookingManager;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;PaymentProcessor paymentProcessor;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-58">
+          <mxGeometry y="26" width="329" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-60" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-58">
+          <mxGeometry y="120" width="329" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-76" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=1;entryY=0.796;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Xb2A5Su3GvtsL2DQCWdl-58" target="Xb2A5Su3GvtsL2DQCWdl-51">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint y="170" as="sourcePoint" />
+            <mxPoint x="160" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-77" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-76">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-87" value="has-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Xb2A5Su3GvtsL2DQCWdl-76">
+          <mxGeometry x="-0.0209" y="2" relative="1" as="geometry">
+            <mxPoint x="1" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-61" value="+ void addFlight(Flight flight);&lt;div&gt;+&amp;nbsp;void addAircraft(Aircraft aircraft);&lt;/div&gt;&lt;div&gt;+&amp;nbsp;List&amp;lt;Flight&amp;gt; searchFlights(String source, String destination, LocalDate date);&lt;/div&gt;&lt;div&gt;+&amp;nbsp;Booking bookFlight(Flight flight, Passenger passenger, Seat seat, double price);&lt;/div&gt;&lt;div&gt;+&amp;nbsp;void cancelBooking(String bookingNumber);&lt;/div&gt;&lt;div&gt;+&amp;nbsp;void processPayment(Payment payment);&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-58">
+          <mxGeometry y="128" width="329" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-62" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="640" y="220" as="sourcePoint" />
+            <mxPoint x="740" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-63" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-62">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-64" value="has-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Xb2A5Su3GvtsL2DQCWdl-62">
+          <mxGeometry x="-0.06" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-65" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=0;entryY=0.413;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Xb2A5Su3GvtsL2DQCWdl-15">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="870" y="430" as="sourcePoint" />
+            <mxPoint x="1030" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-66" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-65">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-67" value="has-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Xb2A5Su3GvtsL2DQCWdl-65">
+          <mxGeometry x="0.092" y="-3" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-72" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="Xb2A5Su3GvtsL2DQCWdl-26">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="600" y="570" as="sourcePoint" />
+            <mxPoint x="760" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-73" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-72">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-89" value="has-a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Xb2A5Su3GvtsL2DQCWdl-72">
+          <mxGeometry x="-0.2402" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-74" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="960" y="680" as="sourcePoint" />
+            <mxPoint x="1030" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-75" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-74">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-78" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=1.007;entryY=0.203;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.902;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Xb2A5Su3GvtsL2DQCWdl-13" target="Xb2A5Su3GvtsL2DQCWdl-35">
+          <mxGeometry x="-0.4996" y="20" relative="1" as="geometry">
+            <mxPoint x="390" y="280" as="sourcePoint" />
+            <mxPoint x="550" y="280" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-79" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-78">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-90" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Schema Design&lt;/font&gt;&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="490" y="800" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-91" value="&lt;b&gt;Flight&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=20;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="254" y="910" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-92" value="+ int flightID;&lt;div&gt;+ int aircraftID;&lt;br&gt;&lt;div&gt;+ String flightName;&lt;/div&gt;&lt;div&gt;+ String src;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ String dest;&lt;/div&gt;&lt;div&gt;+ LocalDateTime arrivalTime;&lt;/div&gt;&lt;div&gt;+ LocalDateTime departureTime;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-91">
+          <mxGeometry y="20" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Xb2A5Su3GvtsL2DQCWdl-91" source="Xb2A5Su3GvtsL2DQCWdl-92" target="Xb2A5Su3GvtsL2DQCWdl-92">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-93" value="&lt;b&gt;Aircraft&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="599" y="940" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-107" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Xb2A5Su3GvtsL2DQCWdl-93" target="Xb2A5Su3GvtsL2DQCWdl-92">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1" y="60" as="sourcePoint" />
+            <mxPoint x="161" y="60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-108" value="N" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-107">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-94" value="+ int aircraftID;&lt;div&gt;+ int tailNumber;&lt;/div&gt;&lt;div&gt;+ String model;&lt;/div&gt;&lt;div&gt;+ int totalSeat;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-93">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-95" value="&lt;b&gt;Seat&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="950" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-96" value="+ int seatID;&lt;div&gt;+ int aircraftID;&lt;/div&gt;&lt;div&gt;+ int seatNumber;&lt;/div&gt;&lt;div&gt;+ String seatStatue;&lt;/div&gt;&lt;div&gt;+ String seatType;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-95">
+          <mxGeometry y="30" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-97" value="&lt;b&gt;Payment&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=20;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="1210" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-98" value="+ int paymentID;&lt;div&gt;+ int bookingID;&lt;/div&gt;&lt;div&gt;+ double amount;&lt;/div&gt;&lt;div&gt;+ Date paymentDate;&lt;/div&gt;&lt;div&gt;+ String paymentMethod;&lt;/div&gt;&lt;div&gt;+ String paymentStatus;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-97">
+          <mxGeometry y="20" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-99" value="&lt;b&gt;Booking&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="1240" width="160" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-115" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Xb2A5Su3GvtsL2DQCWdl-99" target="Xb2A5Su3GvtsL2DQCWdl-98">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="60" as="sourcePoint" />
+            <mxPoint x="160" y="60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-116" value="1" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-115">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-100" value="+ int bookingID;&lt;div&gt;+ int flightID;&lt;/div&gt;&lt;div&gt;+ int seatID;&lt;/div&gt;&lt;div&gt;+ int passengerID;&lt;br&gt;&lt;div&gt;+ int bookingNumber;&lt;/div&gt;&lt;div&gt;+ double price;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ String bookingStatus;&lt;/div&gt;&lt;div&gt;+ Date bookingDate;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-99">
+          <mxGeometry y="50" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-101" value="&lt;b&gt;Passenger&lt;/b&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="1240" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-113" value="" style="endArrow=none;html=1;rounded=0;entryX=1.013;entryY=0.195;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Xb2A5Su3GvtsL2DQCWdl-101" target="Xb2A5Su3GvtsL2DQCWdl-99">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="40" as="sourcePoint" />
+            <mxPoint x="160" y="40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-114" value="N" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-113">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-102" value="+ int passengerID;&lt;div&gt;+ String name;&lt;/div&gt;&lt;div&gt;+ String phone;&lt;/div&gt;&lt;div&gt;+ String email;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-101">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-105" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="Xb2A5Su3GvtsL2DQCWdl-99">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="1080" as="sourcePoint" />
+            <mxPoint x="570" y="1080" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-106" value="N" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-105">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-109" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="1020" as="sourcePoint" />
+            <mxPoint x="920" y="1020" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-110" value="N" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-109">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-111" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="Xb2A5Su3GvtsL2DQCWdl-99">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="930" y="1070" as="sourcePoint" />
+            <mxPoint x="1090" y="1070" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-112" value="N" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-111">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-117" value="API endpoint" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="1470" width="950" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-119" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-117">
+          <mxGeometry y="26" width="950" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-120" value="1. &lt;b&gt;Flight Search API: GET /flights/search&lt;/b&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; Request:&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;source&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;JFK&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;destination&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;LAX&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;date&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;2024-11-06&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;&amp;nbsp; &amp;nbsp; Response:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;flights&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;flight_number&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;AI202&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;source&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;JFK&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;destination&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;LAX&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;departure_time&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;2024-11-06T08:00:00Z&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;arrival_time&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;2024-11-06T11:00:00Z&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;available_seats&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;50&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;2.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;Booking API:&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;POST /bookings&lt;/b&gt;&lt;br&gt;&amp;nbsp; &amp;nbsp;Request:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;flight_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;101&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;passenger_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;1001&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;seat_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;15&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;price&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;200.0&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;&amp;nbsp; &amp;nbsp;Response:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;booking_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;12345&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;status&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;confirmed&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;flight_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;101&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;passenger_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;1001&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;seat_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;15&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;price&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;200.0&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;3.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;Payment API:&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;POST /payments&lt;/b&gt;&lt;br&gt;&amp;nbsp; &amp;nbsp; Request:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;booking_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;12345&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;amount&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;200.0&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;payment_method&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;Credit Card&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;&amp;nbsp; &amp;nbsp; Response:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;payment_id&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;54321&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;status&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;successful&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;amount&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-number&quot;&gt;200.0&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-attr&quot;&gt;&quot;payment_method&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-string&quot;&gt;&quot;Credit Card&quot;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-punctuation&quot;&gt;}&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-117">
+          <mxGeometry y="34" width="950" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-121" value="Design Pattern" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="254" y="1724" width="690" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-123" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-121">
+          <mxGeometry y="26" width="690" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb2A5Su3GvtsL2DQCWdl-124" value="&lt;li&gt;&lt;p&gt;&lt;strong&gt;Singleton Pattern&lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Used for &lt;code&gt;BookingManager&lt;/code&gt; and &lt;code&gt;PaymentProcessor&lt;/code&gt; classes to ensure only one instance exists for managing bookings and processing payments.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Factory Pattern&lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Can be used to create instances of different types of &lt;code&gt;Payments&lt;/code&gt; (e.g., &lt;code&gt;CreditCardPayment&lt;/code&gt;, &lt;code&gt;PayPalPayment&lt;/code&gt;) based on the selected method.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Strategy Pattern&lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Implemented in the &lt;code&gt;PaymentProcessor&lt;/code&gt; class, where different strategies for payment processing (e.g., credit card, debit card, and bank transfer) can be handled.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Observer Pattern&lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Used for &lt;code&gt;Booking&lt;/code&gt; to notify &lt;code&gt;Flight&lt;/code&gt; and &lt;code&gt;Seat&lt;/code&gt; classes to update their status once a booking is confirmed.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Xb2A5Su3GvtsL2DQCWdl-121">
+          <mxGeometry y="34" width="690" height="366" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
